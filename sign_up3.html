@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign_Up</title>
+</head>
+<body>
+<!-- ტექსტული ველის ფორმა - სახელი გვარი, წელი -->
+    <form action="http://localhost/web_developing/php_speqtri.php" method="POST" name="login" enctype="multipart/form-data">
+        სახელი: <BR>
+        <input type="text" name="username" placeholder="Name"><br>
+        გვარი: <BR>
+        <input type="text" name="surname" placeholder="Surname"><br>
+        დაბადების წელი: <BR>
+        <input type="int" name="BorthYear" placeholder="Year"><br>
+<!-- ფორმა გადამრთველი - სქესის შესახ -->        
+    <fieldset" name="gadamrtveli_radio"> <legend>სქესი:</legend>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="male">მამრობითი</label><br/> 
+        <input type="radio" name="gender" id="female" value="female"> 
+        <label for="female">მდედრობითი </label><br/>
+    </fieldset>
+<!-- ალმებიანი ფორმა - ინფორმაციის შესახებ -->
+    <fieldset name="check_main"> <legend>საიდან გაქვთ ინფორმაცია ჩვენს შესახებ:</legend>
+        <input type="checkbox" name="info1" id="info1" value="მეგობრებისგან"> <label for="info1">მეგობრებისგან</label><br/> 
+        <input type="checkbox" name="info2" id="info2" value="ინტერნეტით"> <label for="info2">ინტერნეტით</label><br/>
+        <input type="checkbox" name="info3" id="info3" value="ტელევიზიით"> <label for="info3">ტელევიზიით</label><br/>
+    </fieldset>
+<!-- ფორმა მეილზე შესახ -->
+E_mail: <BR>
+    <input type="mail" name="E_mail" placeholder="user@gmail.com"><br>           
+    პაროლი: <br>
+    <input type="password" value="paroli1" name="psw1"><br>
+    პაროლი განმეორებით:<br>
+    <input type="password" value="paroli2" name="psw2"><br>
+<hr>
+<!-- ფაილის ასატვირთი ფორმა -->
+        ატვირთეთ სურათი (600x600 px):
+        <input type="file" name="picture" accept="file_extension"><br>
+<!--
+        <input type="file" name="picture" accept="image/*">
+        <input type="file" name="picture" accept="audio/*">
+        <input type="file" name="picture" accept="video/*">
+        <input type="file" name="picture" accept="media_type">
+-->
+<!-- ფაილის ასატვირთი ფორმა 
+    შენიშვნა: select ელემენტში multiple ატრიბუტის დამატება <select multiple> იძლევა 
+    რამოდენიმე პუნქტის ერთდროულად მონიშვნის საშუალებას (ctrl კლავიშის დახმარებით).
+    ასევე შეიძლება <select size="3">
+-->
+    <hr>
+        აირჩეით პროგრამირების ენა:
+    <select name="pp_llang">
+        <option value=" ">&nbsp;</option>    
+        <optgroup label="Back-End:"></optgroup>
+        <option value="Python" name="prog_lang1">Python</option> 
+        <option value="PHP" name="prog_lang2">PHP</option> 
+        <option value="C##" name="prog_lang3">C##</option> 
+        <optgroup label="Front-End:"></optgroup>
+        <option value="HTML" name="prog_lang4">HTML</option> 
+        <option value="CSS" name="prog_lang5">CSS</option> 
+        <option value="JavaScript" name="prog_lang6">JavaScript</option>
+    </select><br>
+    <hr>
+        <input type="submit" value="Sign_Up"><br>
+        <hr>
+
+    </form>
+
+    <form action="action.php" method="GET" enctype="application/x-www-form urlencoded"name="mail"> 
+        მოგვწერეთ, თქვენი აზრი ჩვეთვის მნიშვნელოვანია:<br /> 
+        <textarea cols="70" rows="2">&nbsp; </textarea> <br /> 
+        <input type="submit" value="Submit"> 
+    </form>
+
+    <div style="position: absolute; background-color: beige; right: 0; width: 50%; height: 100%;">
+        <p>Hello </p>
+    </div>
+</body>
+</html>
